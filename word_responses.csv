@@ -1,0 +1,144 @@
+Age,Gender,Education,main_activity,visit_freq,habitat_1,habitat_2,habitat_3,Category_1,Category_2,Category_3,threat_cor1,threat_cor2,threat_cor3,threat_cor_category_1,threat_cor_category_2,threat_cor_category_3,threat_sea1,threat_sea2,threat_sea3,threat_sea_category_1,threat_sea_category_2,threat_sea_category_3,soc_gbr,cul_gbr
+45-54,M,Diploma,Sailing,Once a year,Lagoon,Reef,Mangrove,lagoon,coral_reef,mangroves,Global warming ,Coastal run-off ,Plastic waste,climate_change,runoff,pollution,Coastal run-off,Trawling ,Propellers,runoff,trawling,boat_damage,5,4
+18-24,F,Master's degree,Scuba,Once a month,Corals,anemone,algae,coral_reef,other_marine_organisms,macroalgae,climate change and related extreme events,pollution / plastic,overfishing,climate_change,pollution,commercial_fishing,overfishing,boat anchors,climate change extreme events,commercial_fishing,boat_damage,climate_change,5,3
+35-44,M,Master's degree,Scuba,Once a month,Coral reef,Islands,Rainforest,coral_reef,non_biological_habitats,NA,Ocean acidification,Sea temperature rise,More frequent severe storms ,climate_change,climate_change,climate_change,Biodiversity loss,Development ,Ocean acidification,habitat_biodiversity_loss,coastal_development,climate_change,5,3
+25-34,M,Secondary Education,Rec_fish,Less than once a year,Reef itself ,Colours of coral ,Beautiful fish,coral_reef,coral_reef,other_marine_organisms,Coal ,Heated ocean ,No enough support ,mining,climate_change,others,Trawling,Over fishing ,Temperature ,trawling,commercial_fishing,climate_change,4,4
+18-24,M,Bachelor's degree,Scuba,Few times a year,Coral bommie,wreck,reefwall,coral_reef,non_biological_habitats,coral_reef,storm damage,Ocean acidification,global warming,extreme_events,climate_change,climate_change,motor boat activity,human interaction,Sea level rise,boat_damage,direct_damage,climate_change,4,4
+55-64,F,Diploma,Scuba,Few times a year,Coral Reefs,Seaweed forests,Mangrove forests ,coral_reef,macroalgae,mangroves,Commercial Fishing,Plastic ,Climate change ,commercial_fishing,pollution,climate_change,Commercial Fishing ,Plastic ,Climate change ,commercial_fishing,pollution,climate_change,3,3
+65+,M,Diploma,Scuba,About once a week,Turtles,Fish types,Reef,other_marine_organisms,other_marine_organisms,coral_reef,Fish,Reef,Turtles,commercial_fishing,NA,NA,Floods,Chemicals,Over eating,extreme_events,pollution,climate_change,4,4
+55-64,M,Secondary Education,Sailing,Once a year,Fish,Coral,Sea grass,other_marine_organisms,coral_reef,seagrass,Crown of thorns,Over fishing ,Storms,COTs,commercial_fishing,extreme_events,Run off of fertiliser ,Dredging sediment,Imported sand like the Strand in Townsville ,pollution,dredging,coastal_development,4,4
+18-24,F,Bachelor's degree,Scuba,Few times a year,coral,benthic/sand/ocean floor,seagrass/algae,coral_reef,non_biological_habitats,seagrass,climate change - bleaching,overfishing,water pollution,climate_change,commercial_fishing,pollution,climate change ,algal blooms from eutrophication,human land-based impact (eg. infrastructure),climate_change,pollution,coastal_development,4,4
+45-54,F,Master's degree,Sailing,Once a year,coral reef,sea grass beds,open ocean,coral_reef,seagrass,ocean,Climate change,sediment and pollution runoff,overfishing and destructive fishing,climate_change,runoff,commercial_fishing,climate change,sediment and pollution runoff,overfishing and destructive fishing,climate_change,runoff,commercial_fishing,3,4
+25-34,F,Bachelor's degree,Scuba,Every day,Coral Reefs,Mangroves,Seagrass,coral_reef,mangroves,seagrass,Ocean acidification,Increased water temperature,"Land runoff and water pollution from foreign chemicals (oil spills, agricolture pesticides etc",climate_change,climate_change,runoff,Ocean acidification ,Land runoff and water pollution,destructive fishing practices,climate_change,runoff,commercial_fishing,5,4
+35-44,M,Secondary Education,Rec_fish,Once a month,Reef ,Rock,Sand,coral_reef,non_biological_habitats,non_biological_habitats,Pollution ,Warming ,Damage ,pollution,climate_change,direct_damage,Pollution ,Warming ,Damage ,pollution,climate_change,direct_damage,5,5
+18-24,F,Bachelor's degree,Sailing,Once a year,Coral reef,Sandy Beaches,Open ocean,coral_reef,non_biological_habitats,ocean,Global warming,tourism,Pollution,climate_change,direct_damage,pollution,Bottom trawling,Climate change,Tourism,trawling,climate_change,direct_damage,5,5
+35-44,F,Ph. D,Sailing,Few times a year,Coral Reef,Seagrass,Mangroves,coral_reef,seagrass,mangroves,Climate change,Water quality,Physical damage,climate_change,pollution,direct_damage,Sediment,Nutrients,Physical damage,runoff,pollution,direct_damage,3,3
+35-44,M,Secondary Education,Kite_surfing,Every day,Coral,Open water ,Sand islands,coral_reef,ocean,non_biological_habitats,Shipping,Pollution ,Greed,boat_damage,pollution,others,Pollution ,Shipping,Dredging ,pollution,boat_damage,dredging,3,4
+65+,M,Bachelor's degree,Sailing,NA,whitsunday islands,abbot point,great keppel isands,non_biological_habitats,non_biological_habitats,non_biological_habitats,coal transport,tourism development on shore,pollution,mining,direct_damage,pollution,pollution,onshore tourist development,dredging,pollution,coastal_development,dredging,3,3
+18-24,M,Secondary Education,Snorkeling_freediving,Few times a year,Coral reef,Sand quay,NA,coral_reef,non_biological_habitats,NA,Fishing nets + anchors,Overfishing,Climate change,boat_damage,commercial_fishing,climate_change,Nets + anchors,Climate change,Storms,boat_damage,climate_change,extreme_events,4,2
+25-34,M,Diploma,Spearfishing,Once a month,Nudie branches ,Coral trout ,Tuskfish ,other_marine_organisms,other_marine_organisms,other_marine_organisms,Human trash,Storms,Sun bleaching,pollution,extreme_events,bleaching,Human trash,Over fishing,Storms,pollution,commercial_fishing,extreme_events,4,4
+55-64,F,Ph. D,Sailing,About once a week,Coral reef,Seagrass,Coastal ,coral_reef,seagrass,non_biological_habitats,Global warming ,Ocean acidification ,Nutrient runoff,climate_change,climate_change,runoff,nutrients ,Disturbance ,Cyclones ,pollution,direct_damage,extreme_events,4,4
+25-34,F,Bachelor's degree,Rec_fish,Few times a year,Land,Water,Sky,non_biological_habitats,ocean,NA,Heat,Run off,Foreign soils,climate_change,runoff,others,Walking on,Erosion,Natural disasters,direct_damage,others,extreme_events,4,4
+NA,M,Secondary Education,Rec_fish,Few times a year,Coastal reef,Bommies,Seafloor sediment,coral_reef,coral_reef,non_biological_habitats,Boats,Water pollution,Natural disasters,boat_damage,pollution,extreme_events,Boats,Pollution,Natural disasters ,boat_damage,pollution,extreme_events,4,4
+35-44,M,Diploma,Scuba,About once a week,coral Reef ,Fish life,Green zones ,coral_reef,other_marine_organisms,protected_areas,Commercial Fishing  ,Commercial waste  ,Farming chemicals ,commercial_fishing,pollution,farming,Commercial Fishing,Commercial Waste,Farming Chemicals ,commercial_fishing,pollution,farming,5,5
+45-54,F,Diploma,Snorkeling_freediving,Few times a year,Mangroves,Reef,Island reef,mangroves,coral_reef,non_biological_habitats,Climate change,Rising sea levels,Heating up of the ocean,climate_change,climate_change,climate_change,Change of water temperature,Rising sea levels,Destruction of habitat,climate_change,climate_change,habitat_biodiversity_loss,4,4
+25-34,F,Bachelor's degree,Sailing,Few times a year,Reef,Ocean,Island,coral_reef,ocean,non_biological_habitats,Coral bleaching,Crown of thorns,Over fishing,bleaching,COTs,commercial_fishing,Threats to marine species,Climate change,Degradation of reef,habitat_biodiversity_loss,climate_change,habitat_biodiversity_loss,5,4
+65+,M,Secondary Education,Rec_fish,Few times a year,Mangroves ,Corals ,Fish species ,mangroves,coral_reef,other_marine_organisms,Crown of thorns ,Cyclones,Farming ,COTs,extreme_events,farming,Farming,Cyclones,Loss of animals ,farming,habitat_biodiversity_loss,habitat_biodiversity_loss,3,3
+18-24,F,Ph. D,Scuba,Few times a year,Coral reef,Macroalgae beds,Rubble ,coral_reef,macroalgae,non_biological_habitats,Habitat loss,Habitat fragmentation,Species extinction,habitat_biodiversity_loss,habitat_biodiversity_loss,habitat_biodiversity_loss,Habitat loss,Habitat fragmentation,Species extinction,habitat_biodiversity_loss,habitat_biodiversity_loss,habitat_biodiversity_loss,5,5
+55-64,F,Bachelor's degree,Rec_fish,Less than once a year,Corals ,Sea animals ,Sea glasses ,coral_reef,other_marine_organisms,seagrass,Rise in the sea level ,Rise in the water temperature ,Environment ,climate_change,climate_change,NA,Rise in the sea level ,Rise in the seawater ,Environment ,climate_change,climate_change,NA,1,1
+65+,M,Bachelor's degree,Kayak,Once a month,Coral reef,Mangroves,Rocky shores,coral_reef,mangroves,non_biological_habitats,Bleaching due to temperatures ,Crown of thornes,NA,bleaching,COTs,NA,Urban development ,Temperatures ,NA,coastal_development,climate_change,NA,3,4
+25-34,M,Bachelor's degree,Scuba,Few times a year,Coral reef,Seagrass,Mangrove,coral_reef,seagrass,mangroves,Overfishing,Climate change,NA,commercial_fishing,climate_change,NA,Dredging,Climate change,NA,dredging,climate_change,NA,3,3
+18-24,F,Bachelor's degree,Scuba,Once a month,Coral reefs,NA,NA,coral_reef,NA,NA,Bleaching,overfishing,Sea temperature increase,bleaching,commercial_fishing,climate_change,Corrosion,Sea temperature rise,NA,others,climate_change,NA,5,5
+25-34,M,Master's degree,Scuba,Few times a year,Reef,sandy bottom,ocean,coral_reef,non_biological_habitats,ocean,water pollution,increase in temperature of the water,massive fishing,pollution,climate_change,commercial_fishing,water pollution,increase in water temperature,NA,pollution,climate_change,NA,4,3
+25-34,F,Bachelor's degree,Scuba,Less than once a year,Reef,Marine,Mangroves,coral_reef,ocean,mangroves,climate change,people activities,natural disasters,climate_change,direct_damage,extreme_events,climate change,people activities,natural disasters,climate_change,direct_damage,NA,3,3
+35-44,M,Secondary Education,Boating,Once a month,Reef,Mangroves,Islands,coral_reef,mangroves,non_biological_habitats,Polution,People,Global warming,pollution,direct_damage,climate_change,Boats,Dredging,NA,boat_damage,dredging,NA,5,5
+45-54,F,Secondary Education,Rec_fish,Few times a year,Rocks,Trees,NA,non_biological_habitats,NA,NA,Plastic,Over fishing,Rubbish,pollution,commercial_fishing,pollution,Cyclones,Weather ,NA,extreme_events,extreme_events,NA,5,5
+35-44,M,Bachelor's degree,Boating,Once a month,Coral reef,Mangroves ,Kelp,coral_reef,mangroves,macroalgae,Bleaching,Litter,Over fishing,bleaching,pollution,commercial_fishing,Climate change,NA,NA,climate_change,NA,NA,4,4
+45-54,F,Master's degree,Rec_fish,Once a month,Reef,Fish,Coral,coral_reef,other_marine_organisms,coral_reef,Global warming,NA,NA,climate_change,NA,NA,Global warming,NA,NA,climate_change,NA,NA,4,4
+35-44,F,Bachelor's degree,Sailing,Few times a year,Coral bed,Sea grass,Anemone,coral_reef,seagrass,other_marine_organisms,Global warming,NA,NA,climate_change,NA,NA,Global warming,NA,NA,climate_change,NA,NA,4,4
+35-44,F,Bachelor's degree,Rec_fish,Few times a year,Reef,Water,NA,coral_reef,ocean,NA,Global warming,Over fishing,Polution,climate_change,commercial_fishing,pollution,Global warming ,NA,NA,climate_change,NA,NA,1,1
+18-24,M,Bachelor's degree,Snorkeling_freediving,Once a month,Reef flat,Shelves,NA,coral_reef,non_biological_habitats,NA,Humans,NA,NA,direct_damage,NA,NA,Humans,NA,NA,direct_damage,NA,NA,4,4
+45-54,F,Bachelor's degree,Rec_fish,Few times a year,Coral,Reef fish ,Various fish species ,coral_reef,other_marine_organisms,other_marine_organisms,Human destroy reef,NA,NA,direct_damage,NA,NA,Humans ,NA,NA,direct_damage,NA,NA,4,NA
+35-44,F,Secondary Education,Sailing,Once a month,Mangroves,Coral reefs,Islands,mangroves,coral_reef,non_biological_habitats,Cyclones,Over fishing,NA,extreme_events,commercial_fishing,NA,Dredging ,NA,NA,dredging,NA,NA,4,4
+25-34,M,Secondary Education,Spearfishing,Once a month,Coral reef,Sand cays,John brewer reef,coral_reef,non_biological_habitats,coral_reef,Coral bleaching ,Crown of thrones ,Natural environmental impacts cyclones etc ,bleaching,COTs,extreme_events,Natural environmental weather ,.,.,extreme_events,NA,NA,4,2
+25-34,M,Bachelor's degree,Boating,Few times a year,Reef,Beach,Mangrove,coral_reef,non_biological_habitats,mangroves,Crown of thornes,NA,NA,COTs,NA,NA,Cyclone,NA,NA,extreme_events,NA,NA,2,2
+55-64,M,Diploma,Sailing,Once a month,Mangroves,Reef,NA,mangroves,coral_reef,NA,Farming sugar cane,Commercial fshing,NA,farming,commercial_fishing,NA,Farming run off,NA,NA,farming,NA,NA,4,NA
+35-44,M,Secondary Education,Boating,Once a month,Reef ,Fish,NA,coral_reef,other_marine_organisms,NA,Reef dieing,No fishing,No snorkeling ,NA,commercial_fishing,NA,Animals dieing,NA,NA,habitat_biodiversity_loss,NA,NA,4,4
+55-64,M,Diploma,Kite_surfing,Every day,Coral,Sea life,Endangered species ,coral_reef,other_marine_organisms,other_marine_organisms,Starfish,Climate,Man,COTs,climate_change,direct_damage,NA,NA,NA,NA,NA,NA,3,3
+35-44,F,Secondary Education,Boating,Few times a year,Fish,Coral ,Sharkes,other_marine_organisms,coral_reef,other_marine_organisms,Temperature ,Fishing,NA,climate_change,commercial_fishing,NA,NA,NA,NA,NA,NA,NA,4,3
+25-34,M,Secondary Education,Jetski,Few times a year,Trout,Fish,Coral,other_marine_organisms,other_marine_organisms,coral_reef,Bad boating people ,NA,NA,boat_damage,NA,NA,Not sure,NA,NA,NA,NA,NA,3,3
+18-24,M,Secondary Education,Scuba,About once a week,fringing reefs,vast reef flats,Reef walls,coral_reef,coral_reef,coral_reef,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+18-24,M,Secondary Education,Spearfishing,Once a month,Reef drop offs ,Reef lagoon ,Reef Flats ,coral_reef,lagoon,coral_reef,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+45-54,M,Secondary Education,Rec_fish,Few times a year,Coral reef ,Mangroves,Estuaries ,coral_reef,mangroves,estuaries,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+55-64,F,Diploma,Sailing,Few times a year,Coral Reef,Sea grass,Kelp forests,coral_reef,seagrass,macroalgae,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+35-44,F,Ph. D,Sailing,Once a month,Coral Reef,Seagrass,Mangroves,coral_reef,seagrass,mangroves,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+35-44,F,Secondary Education,Boating,Once a month,Island,Outer reef,NA,non_biological_habitats,coral_reef,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+25-34,M,Bachelor's degree,Scuba,Few times a year,Coral reefs,NA,NA,coral_reef,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+55-64,M,Diploma,Sailing,Once a month,Reef,NA,NA,coral_reef,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+18-24,F,Secondary Education,Boating,Few times a year,Snorkeling ,Boating,Glass bottom boat tours,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+25-34,M,Bachelor's degree,Rec_fish,About once a week,Driving responsibly ,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+18-24,F,Secondary Education,Sailing,Few times a year,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+55-64,M,Secondary Education,Sailing,Once a month,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+35-44,F,Master's degree,Scuba,Less than once a year,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+18-24,F,Bachelor's degree,Scuba,Once a month,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+35-44,F,Bachelor's degree,Scuba,About once a week,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+65+,M,Bachelor's degree,Sailing,Once a month,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+45-54,M,Diploma,Sailing,Once a year,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+55-64,F,Diploma,Sailing,About once a week,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+55-64,M,Secondary Education,Sailing,Few times a year,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+65+,M,Secondary Education,Sailing,Once a year,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+25-34,F,Secondary Education,Rec_fish,About once a week,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+55-64,M,Bachelor's degree,Sailing,Once a month,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+55-64,F,Ph. D,Sailing,About once a week,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+65+,M,Secondary Education,Sailing,Less than once a year,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+25-34,F,Bachelor's degree,Sailing,About once a week,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+65+,M,Diploma,Sailing,Once a month,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+65+,M,Technical College ,Sailing,Every day,Coral,Coral fish,NA,coral_reef,other_marine_organisms,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+35-44,M,Secondary Education,Scuba,Few times a year,Reef flat,Corals,Sandy bottom,coral_reef,coral_reef,non_biological_habitats,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+35-44,M,Master's degree,Sailing,Once a month,Grass,Coral,Sand,seagrass,coral_reef,non_biological_habitats,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+25-34,M,Other,Spearfishing,About once a week,Hard corals,Sandy lagoons,Shoalie ground,coral_reef,lagoon,non_biological_habitats,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+18-24,M,Secondary Education,Rec_fish,Once a year,Coral reef,Kelp field ,Sand flats,coral_reef,macroalgae,non_biological_habitats,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+55-64,F,Diploma,Scuba,Few times a year,Coral,Mangroves,Wrecks,coral_reef,mangroves,non_biological_habitats,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+65+,F,Diploma,Sailing,Few times a year,Coral,Rocks,Shells,coral_reef,non_biological_habitats,non_biological_habitats,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+35-44,M,Diploma,Spearfishing,Once a month,Reef,Sand,Inshore,coral_reef,non_biological_habitats,non_biological_habitats,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+18-24,M,Bachelor's degree,Spearfishing,About once a week,Coral,Sediment ,Pelagic,coral_reef,non_biological_habitats,non_biological_habitats,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+18-24,F,Bachelor's degree,Snorkeling_freediving,Few times a year,Coral Reef,Mangroves,Open ocean,coral_reef,mangroves,ocean,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+55-64,F,Bachelor's degree,Rec_fish,Once a year,Coral ,Watercolour ,Sea animals ,coral_reef,ocean,other_marine_organisms,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+65+,M,Bachelor's degree,Sailing,Few times a year,Restricted,General,Protected,protected_areas,protected_areas,protected_areas,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+45-54,F,Bachelor's degree,Boating,Once a month,mangroves,reef,seagrass,mangroves,coral_reef,seagrass,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+18-24,F,Master's degree,Scuba,Once a month,Coral reefs,Macro algae ,Sea grass,coral_reef,macroalgae,seagrass,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+45-54,F,Secondary Education,Snorkeling_freediving,Once a year,Corals ,Islands ,Seagrass meadows ,coral_reef,non_biological_habitats,seagrass,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+18-24,F,Bachelor's degree,Scuba,Few times a year,Coral Reef,Sandy substrate,Seagrass,coral_reef,non_biological_habitats,seagrass,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+25-34,F,Master's degree,Rec_fish,Few times a year,Coral reefs,Estuaries,Rivers,coral_reef,estuaries,NA,Pollution,Over fishing,NA,pollution,commercial_fishing,NA,Pollution,NA,NA,pollution,NA,NA,5,5
+25-34,M,Secondary Education,Jetski,Once a month,Reef ,Marine park,NA,coral_reef,protected_areas,NA,Pollution ,NA,NA,pollution,NA,NA,Pollution ,Population ,NA,pollution,NA,NA,4,3
+18-24,F,Bachelor's degree,Spearfishing,Once a month,Coral ,Fish ,Sharks ,coral_reef,other_marine_organisms,other_marine_organisms,Litter,NA,NA,pollution,NA,NA,Litter,NA,NA,pollution,NA,NA,4,3
+45-54,F,Secondary Education,NA,Once a month,Reef,Marine life,Birds,coral_reef,other_marine_organisms,NA,Crown of thorns,Sedimentation,Climate control ,COTs,runoff,NA,Pollution,NA,NA,pollution,NA,NA,4,4
+55-64,F,Secondary Education,Rec_fish,Less than once a year,Fish,Water,Coral ,other_marine_organisms,ocean,coral_reef,Run off ,NA,NA,runoff,NA,NA,Run off,NA,NA,runoff,NA,NA,4,3
+45-54,M,Secondary Education,Boating,Every day,Green zone,Preservation area,NA,protected_areas,protected_areas,NA,Runoff,Trawler nets,Plastic ,runoff,trawling,pollution,Trawler nets,NA,NA,trawling,NA,NA,3,3
+55-64,M,Bachelor's degree,Sailing,Few times a year,Sand cay,Reef,Islands,non_biological_habitats,coral_reef,non_biological_habitats,Vessel anchoring,Refuse,Fuel,boat_damage,NA,pollution,Siltation,Public perception as not important ,NA,runoff,others,NA,5,NA
+45-54,M,Secondary Education,Rec_fish,Once a year,Fish,Coral,Water,other_marine_organisms,coral_reef,ocean,Oil,Sun,Cyclone ,mining,NA,extreme_events,Humans ,Pollution,NA,direct_damage,pollution,NA,4,4
+25-34,M,Master's degree,Boating,Once a year,Coral Reef,NA,NA,coral_reef,NA,NA,People,Waste,Energy mining,direct_damage,pollution,mining,People,Waste,NA,direct_damage,pollution,NA,4,4
+25-34,F,Master's degree,Scuba,Few times a year,Coral reef,Seagrass,Mangrove,coral_reef,seagrass,mangroves,Global warming / bleaching,run off nutrient pollution,boating / diving breakage,climate_change,runoff,boat_damage,Nutrient pollution,Fishing / Trawling damage,NA,pollution,trawling,NA,4,3
+55-64,M,Diploma,Rec_fish,Once a month,Reef,NA,NA,coral_reef,NA,NA,Crown of thornes ,Pollution  from ships,NA,COTs,pollution,NA,Ship pollution ,Trawlers ,NA,pollution,trawling,NA,5,3
+45-54,M,Diploma,Boating,Few times a year,Reef,Grass beds,Mangrove ,coral_reef,seagrass,mangroves,Anchor ,Comical fishing ,Climate ,boat_damage,commercial_fishing,climate_change,Sediment ,Development ,Removal of our natural filters,runoff,coastal_development,others,4,4
+18-24,M,Bachelor's degree,Scuba,Once a year,Sand flats,Coral reef,Open Ocean,non_biological_habitats,coral_reef,ocean,Cyclones,Pollution,Climate change,extreme_events,pollution,climate_change,Fishing nets,Dredging,Dugongs,commercial_fishing,dredging,others,3,3
+65+,M,Diploma,Rec_fish,Every day,Marine parks,No go fishing zones,Open fishing areas,protected_areas,protected_areas,protected_areas,Over commercial fishing,Mining,Political ignorance,commercial_fishing,mining,others,Commercial fishing,Dredging for profit,Ignorant greed of political parties,commercial_fishing,dredging,others,5,5
+35-44,M,Secondary Education,Boating,About once a week,Bommies,Seagrass,Mangroves,coral_reef,seagrass,mangroves,Coral bleaching ,Starfish ,Over fishing,bleaching,COTs,commercial_fishing,Pollution ,Boating ,Rubbish,pollution,boat_damage,pollution,3,4
+18-24,M,Bachelor's degree,Scuba,Once a month,Reefs,Mangroves,Sand banks,coral_reef,mangroves,non_biological_habitats,Fishing,Climate change,Pollution,commercial_fishing,climate_change,pollution,Climate change,warming ocean,pollution,climate_change,climate_change,pollution,5,4
+35-44,M,Master's degree,Spearfishing,Few times a year,Corals ,"Pelagic species, ","Remote islands, rock ground",coral_reef,other_marine_organisms,non_biological_habitats,Commercial Overfishing ,Global heat,Ocean trash,commercial_fishing,climate_change,pollution,Commercial net fishing ,Global heat,Ocean trash,commercial_fishing,climate_change,pollution,4,3
+35-44,M,Ph. D,Kite_surfing,Every day,Coral reefs,Seagrass meadows,Mangroves,coral_reef,seagrass,mangroves,Climate change,COTS (in AUs),Cyclones  (in Aus),climate_change,COTs,extreme_events,Runoff/water quality,Climate change,Pollutants,runoff,climate_change,pollution,3,4
+25-34,M,Bachelor's degree,Rec_fish,Few times a year,Snorkelling ,Fishing ,Scuba diving ,NA,NA,NA,Climate change ,Over fishing ,Pollution ,climate_change,commercial_fishing,pollution,Climate change ,Over fishing ,Pollution ,climate_change,commercial_fishing,pollution,5,4
+18-24,M,Secondary Education,Sailing,Once a year,Coral,Seagrass,mangroves,coral_reef,seagrass,mangroves,Over fishing,Cyclones,Bleaching events,commercial_fishing,extreme_events,bleaching,Dredging,Overfishing,Pollution,dredging,commercial_fishing,pollution,4,3
+65+,F,Bachelor's degree,Snorkeling_freediving,Few times a year,Coral,Invertebrates,Fish,coral_reef,other_marine_organisms,other_marine_organisms,Sea temperature rise,Water quality ,Recreational activities,climate_change,pollution,direct_damage,Sea temperature rise ,Recreational activities,Water quality,climate_change,direct_damage,pollution,3,3
+18-24,F,Secondary Education,Rec_fish,About once a week,Coral reef ,Substratum (sand),Blue holes,coral_reef,non_biological_habitats,non_biological_habitats,Overfishing,Rise in temperature,Anchors from boats,commercial_fishing,climate_change,boat_damage,Clearing for anthropogenic structures,dugongs eat all the grass,sedimentation,direct_damage,others,runoff,5,4
+35-44,M,Bachelor's degree,Rec_fish,Few times a year,Coral reefs,Islands/cays,Lagoon areas,coral_reef,non_biological_habitats,lagoon,"Climate change( increased water temperatures, cyclones, ocean acidification etc.)",Crown of thorns starfish.,Overfishing.,climate_change,COTs,commercial_fishing,Habitat damage,Pesticides/chemical run off,Sedimentation,habitat_biodiversity_loss,pollution,runoff,5,5
+45-54,M,Secondary Education,Sailing,Once a month,Sandy lagoon,Coral reef,Bommies,lagoon,coral_reef,coral_reef,Media,Pollution ,Crown of thorns ,others,pollution,COTs,Media ,River run off ,Silt,others,runoff,runoff,5,4
+18-24,M,Secondary Education,Scuba,Once a month,Coral reef,Sand Flat,Rocky bottoms,coral_reef,non_biological_habitats,non_biological_habitats,Temperature increase,Sea level rise,extinction of key species,climate_change,climate_change,habitat_biodiversity_loss,Fishing nets damaging the bottom,high sedimentation,run-off of chemicals from rivers,trawling,runoff,runoff,5,5
+35-44,M,Master's degree,Scuba,Few times a year,Reef,Lagoon ,Rubble ,coral_reef,lagoon,non_biological_habitats,Rising SST,Overfishing ,Pollution,climate_change,commercial_fishing,pollution,Climate change ,Dredging ,Trawling ,climate_change,dredging,trawling,5,5
+55-64,M,Diploma,Sailing,About once a week,Ocean,Coral,Islands,ocean,coral_reef,non_biological_habitats,Chemicals,Spills,Anchor damage,pollution,pollution,boat_damage,Chemicals,Spills,Bottom netting,pollution,pollution,trawling,4,4
+25-34,M,Ph. D,Rec_fish,Once a month,Coral reef,Deep Inter-Reefal,Tropical Islands ,coral_reef,non_biological_habitats,non_biological_habitats,Climate change ,Cyclones ,Run off ,climate_change,extreme_events,runoff,Cyclones ,Run off ,Trawling ,extreme_events,runoff,trawling,5,5
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,Coral,50,13,3,66,,anchor,1,0,2,3,,fishing,7,5,2,14,,,,
+,,,,Reef,54,13,6,73,,boats,2,0,2,4,,boats,3,2,0,5,,,,
+,,,,Bommie,2,1,1,4,,bleaching,8,0,2,10,,trawling,3,3,2,8,,,,
+,,,,Fish,4,10,6,20,,fishing,11,15,7,33,,climate change,7,5,2,14,,,,
+,,,,Mangrove,5,8,12,25,,climate change,10,3,3,16,,global warming,3,0,0,3,,,,
+,,,,Ocean,1,2,5,8,,global warming,7,0,2,9,,people,1,1,0,2,,,,
+,,,,Sand,3,10,7,20,,humans,3,0,0,3,,humans,4,1,1,6,,,,
+,,,,Island,2,3,9,14,,ocean acidification,3,2,0,5,,ocean acidification,1,0,1,2,,,,
+,,,,Estuaries,0,1,1,2,,pollution,4,8,7,19,,pollution,10,4,3,17,,,,
+,,,,Kelp,0,1,2,3,,run off,2,4,3,9,,run off,5,5,1,11,,,,
+,,,,Lagoon,2,3,1,6,,temperature,5,5,1,11,,temperature,2,3,1,6,,,,
+,,,,Marine,1,3,0,4,,cyclones,3,3,3,9,,cyclones,3,1,1,5,,,,
+,,,,Water,0,5,1,6,,Crown of Thorns,5,4,1,10,,nutrient,2,1,0,3,,,,
+,,,,Seagrass,0,11,7,18,,heat,1,2,1,4,,heat,0,1,0,1,,,,
+,,,,,,,,,,coal,2,0,0,2,,tourism,0,0,1,1,,,,
+,,,,,,,,,,mining,0,1,1,2,,trash,1,0,1,2,,,,
+,,,,,,,,,,farming,1,0,2,3,,farming,2,0,1,3,,,,
+,,,,,,,,,,plastic,1,2,2,5,,plastic,0,1,0,1,,,,
+,,,,,,,,,,waste,0,2,1,3,,waste,0,2,0,2,,,,
+,,,,,,,,,,litter,1,1,0,2,,litter,1,0,0,1,,,,
+,,,,,,,,,,trash,1,0,1,2,,dredging,3,5,2,10,,,,
+,,,,,,,,,,tourism,0,2,0,2,,development,1,3,0,4,,,,
+,,,,,,,,,,people,2,2,0,4,,sediment,2,3,2,7,,,,
+,,,,,,,,,,,,,,,,dugongs,0,1,1,2,,,,

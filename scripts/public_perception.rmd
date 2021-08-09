@@ -1,0 +1,463 @@
+---
+title: "Public perception of marine habitats in the GBR"
+author: "Riccardo Losciale"
+date: "08/06/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Open csv file
+```{r echo= FALSE}
+pp_df <- read.csv("../data/public_perception_data/public_perception.csv")
+
+```
+
+# Explore dependent variables / demographics
+```{r echo =FALSE}
+library("ggplot2")
+library("dplyr")
+age_distribution <- ggplot(data=subset(pp_df, !is.na(Age)), aes(x=Age)) +
+  geom_bar(mapping = aes(Age,stat(prop), group = 1)) +
+  theme_classic() +
+  coord_flip()
+
+gender_distribution <- ggplot (data = pp_df) +
+  geom_bar(mapping = aes(x = Gender, y = stat(prop), group = 1)) +
+             scale_y_continuous(limits = c(0,0.75))
+
+pp_df <- within(pp_df, 
+                   Education <- factor(Education, 
+                                      levels=names(sort(table(Education), 
+                                                        decreasing = TRUE))))
+ed_plot <- ggplot (data = pp_df) +
+  geom_bar(mapping = aes(x = Education, y = stat(prop), group = 1)) +
+             coord_flip()
+
+
+pp_df <- within(pp_df, 
+                main_activity_trim <- factor(main_activity_trim, 
+                                    levels=names(sort(table(main_activity_trim), 
+                                                      decreasing=F))))
+activities_plot <- ggplot(data =subset(pp_df, !is.na(main_activity_trim)), aes(x=main_activity_trim)) +
+  geom_bar(mapping = aes(x = main_activity_trim, y = stat(prop), group = 1)) +
+             coord_flip()
+
+pp_df <- within(pp_df, 
+                visit_freq <- factor(visit_freq, 
+                                        levels=names(sort(table(visit_freq), 
+                                                          decreasing=F))))
+visit_plot <- ggplot(data = subset(pp_df, !is.na(visit_freq))) +
+  geom_bar(mapping = aes(x = visit_freq, y = stat(prop), group = 1)) +
+             coord_flip()
+
+#install.packages("ggpubr")
+library("ggpubr")
+demographic <- ggarrange(age_distribution, gender_distribution, ed_plot, activities_plot, visit_plot, ncol = 3, nrow = 2, labels = c("A", "B", "C", "D", "E"))
+
+demographic
+pp_df %>%
+  count(Age)
+pp_df %>%
+  count(Gender)
+pp_df %>%
+  count(Education)
+pp_df %>%
+  count(main_activity)
+pp_df %>%
+  count(visit_freq)
+```
+
+
+## Change factors levels in dataframe
+```{r echo= T}
+library("forcats")
+Age2 <- fct_collapse(pp_df$Age,
+                         young_adults = c("18-24", "25-34"), 
+                     middle_aged = c("35-44", "45-54"),
+                         older_adults = c("55-64", "65+"))
+Education2 <- fct_collapse(pp_df$Education,
+                           secondary_education = c("Secondary Education", "Other", "Technical College "),
+                           higher_education = c("Bachelor's degree", "Diploma", "Master's degree", "Ph. D"))
+seagrass_perception <- fct_collapse(pp_df$seagrass_image,
+                               healthy = c("good","very_good"),
+                               unhealthy = c("poor","very_poor"))
+coral_perception <- fct_collapse(pp_df$coral_image,
+                               healthy = c("good","very_good"),
+                               unhealthy = c("poor","very_poor"))
+activity_type <- fct_collapse(pp_df$main_activity_trim,
+                              above_water = c("Boating", "Jetski","Kayak", "Kite_surfing", "Rec_fish", "Sailing"),
+                              below_water = c("Scuba", "Snorkeling_freediving", "Spearfishing"))
+
+visit_freq2 <- fct_collapse(pp_df$visit_freq, 
+                            frequent_visitor = c("Every day","About once a week", "Once a month"), 
+                            non_frequent_visitor = c("Few times a year", "Once a year", "Less than once a year"))
+# Add new column to dataframe with cbind
+pp_df <- cbind(pp_df, Age2, Education2, seagrass_perception, coral_perception, activity_type, visit_freq2)
+                
+```
+
+## Correlation between Age and perception of seagrass status
+```{r echo = FALSE}
+pp_df$seagrass_image <- factor(pp_df$seagrass_image,levels = c("very_poor", "poor", "good", "very_good"))
+pp_df %>%
+  filter(!is.na(seagrass_image)) %>% 
+  ggplot() +
+  geom_bar(mapping = aes(x = seagrass_image, y = stat(prop), group = 1 ))
+
+pp_df %>%
+  filter(!is.na(seagrass_perception)) %>%
+  ggplot() +
+  geom_bar(mapping = aes(x = seagrass_perception, y = stat(prop), group = 1 ))
+
+pp_df %>% 
+  filter(!is.na(seagrass_perception) & !is.na(Age2)) %>%
+  count(Age2, seagrass_perception) %>%  
+  ggplot() +
+    geom_tile(mapping = aes(x = Age2, y = seagrass_perception, fill = n))
+
+```
+
+
+
+## Correlation between Age and perception of seagrass status
+```{r echo= FALSE}
+age_sea <- pp_df %>%
+  select(Age2, seagrass_perception) %>%
+  filter(!is.na(seagrass_perception) & !is.na(Age2))
+age_sea <- table(age_sea$Age2, age_sea$seagrass_perception)
+library("gplots")
+balloonplot(t(age_sea), main = "Perception of seagrass status", xlab ="",
+           ylab = "", label = F, show.margins = F)
+library("latticeExtra")
+library("vcd")
+assoc(head(age_sea, 5), shade = TRUE, las=3)
+prop.table(age_sea) # cell percentages
+prop.table(age_sea, 1) # row percentages
+prop.table(age_sea, 2) # column percentages
+chis_age <- chisq.test(age_sea)
+chis_age
+chis_age$observed
+round(chis_age$expected,2)
+round(chis_age$residuals, 3)
+library(corrplot)
+corrplot(chis_age$residuals, is.cor = FALSE)
+# Contibution in percentage (%)
+contrib <- 100*chis_age$residuals^2/chis_age$statistic
+round(contrib, 3)
+# Visualize the contribution
+corrplot(contrib, is.cor = FALSE)
+```
+
+Chi square test of indipendence shows that the variables age and perception of seagrass status are not indipendent (p < 0.05). These graphs show that people between 18 and 35 years old selected more often the very poor or poor image of seagrass compared to people older than 55 years, who maily selected the good or very good image.
+
+## Correlation between Education level and image choiche of seagrass  levels
+```{r echo = FALSE}
+edu_sea <- pp_df %>%
+  select(Education, seagrass_perception) %>%
+  filter(!is.na(seagrass_perception) & !is.na(Education))
+edu_sea <- table(edu_sea$Education, edu_sea$seagrass_perception)
+edu_sea
+balloonplot(t(edu_sea), main = "Perception of seagrass status", xlab ="",
+           ylab = "", label = F, show.margins = F)
+chis_edu <- chisq.test(edu_sea)
+chis_edu
+edu_sea1 <- pp_df %>%
+  select(Education2, seagrass_perception) %>%
+  filter(!is.na(seagrass_perception) & !is.na(Education2))
+edu_sea1 <- table(edu_sea1$Education2, edu_sea1$seagrass_perception)
+
+balloonplot(t(edu_sea1), main = "Perception of seagrass status", xlab ="",
+           ylab = "", label = F, show.margins = F)
+mosaicplot(edu_sea1, shade = TRUE, las=2,
+           main = "Perception of seagrass status")
+
+prop.table(edu_sea1) # cell percentages
+prop.table(edu_sea1, 1) # row percentages
+prop.table(edu_sea1, 2) # column percentages
+chis_edu1 <- chisq.test(edu_sea1)
+chis_edu1
+chis_edu1$observed
+round(chis_edu1$expected,2)
+round(chis_edu1$residuals, 3)
+corrplot(chis_edu1$residuals, is.cor = FALSE)
+# Contibution in percentage (%)
+contrib_edu1 <- 100*chis_edu1$residuals^2/chis_edu1$statistic
+round(contrib_edu1, 3)
+# Visualize the contribution
+corrplot(contrib_edu1, is.cor = FALSE)
+
+```
+This results shows that there is not enough confidence to state that the variables education levels and seagrass perception are not indipendent. However, unhealthy seagrass pictures were selected by 67% of respondents with Higher education. 
+
+## Correlation between gender and image choiche of seagrass with new levels
+```{r echo = FALSE}
+gender_sea <- table(pp_df$Gender, pp_df$seagrass_perception)
+gender_sea
+balloonplot(t(gender_sea), main = "Perception of seagrass status", xlab ="",
+           ylab = "", label = F, show.margins = F)
+
+```
+No difference between gender
+
+
+## Correlation between main activity and image choiche of seagrass with original levels
+```{r echo = F}
+act_sea <- pp_df %>%
+  select(main_activity_trim, seagrass_perception) %>%
+  filter(!is.na(seagrass_perception) & !is.na(main_activity_trim))
+act_sea <- table(act_sea$main_activity_trim, act_sea$seagrass_perception)
+
+act_sea
+balloonplot(t(act_sea), main = "Perception of seagrass status", xlab ="",
+           ylab = "", label = F, show.margins = F)
+act_sea1 <- pp_df %>%
+  select(activity_type, seagrass_perception) %>%
+  filter(!is.na(seagrass_perception) & !is.na(activity_type))
+act_sea1 <- table(act_sea1$activity_type, act_sea1$seagrass_perception)
+
+act_sea1
+balloonplot(t(act_sea1), main = "Perception of seagrass status", xlab ="",
+           ylab = "", label = F, show.margins = F)
+mosaicplot(act_sea1, shade = TRUE, las=2,
+           main = "Perception of seagrass status")
+assoc(head(act_sea1, 5), shade = TRUE, las=3)
+prop.table(act_sea1) # cell percentages
+prop.table(act_sea1, 1) # row percentages
+prop.table(act_sea1, 2) # column percentages
+chis_activity1 <- chisq.test(act_sea1)
+chis_activity1
+chis_activity1$observed
+round(chis_activity1$expected,2)
+round(chis_activity1$residuals, 3)
+corrplot(chis_activity1$residuals, is.cor = FALSE)
+# Contibution in percentage (%)
+contrib_activity1 <- 100*chis_activity1$residuals^2/chis_activity1$statistic
+round(contrib_activity1, 3)
+# Visualize the contribution
+corrplot(contrib_activity1, is.cor = FALSE)
+
+```
+Chi square test of indipendece shows that the variables activity type and seagrass image choiche are statistically not indipendent.  86.8% of people performing below water activities have selected an unhealthy seagrass picture. On the other hand, 87.5% of people chosing a helathy seagrass picture perform activities above water. 
+
+## Correlation between visit frequency and image choiche of seagrass with original levels
+```{r echo = F}
+visit_sea <- pp_df %>%
+  select(visit_freq, seagrass_perception) %>%
+  filter(!is.na(seagrass_perception) & !is.na(visit_freq))
+visit_sea <- table(visit_sea$visit_freq, visit_sea$seagrass_perception)
+visit_sea
+balloonplot(t(visit_sea), main = "Perception of seagrass status", xlab ="",
+           ylab = "", label = F, show.margins = F)
+visit_sea1 <- pp_df %>%
+  select(visit_freq2, seagrass_perception) %>%
+  filter(!is.na(seagrass_perception) & !is.na(visit_freq2))
+visit_sea1 <- table(visit_sea1$visit_freq2, visit_sea1$seagrass_perception)
+visit_sea1
+
+balloonplot(t(visit_sea1), main = "Perception of seagrass status", xlab ="",
+           ylab = "", label = F, show.margins = F)
+mosaicplot(visit_sea1, shade = TRUE, las=2,
+           main = "Perception of seagrass status")
+assoc(head(visit_sea1, 5), shade = TRUE, las=3)
+
+chis_visit1 <- chisq.test(visit_sea1)
+chis_visit1
+
+```
+Results show no relation between visit Frequency and perception of seagrass status
+
+## Multicollinearity among dependent variables
+```{r echo = F}
+pp_df %>% 
+  filter(!is.na(Age2)) %>%
+  count(Age2, Education2) %>%
+  ggplot() +
+  geom_tile(mapping = aes(x = Age2, y = Education2, fill = n))
+
+age_edu <- pp_df %>%
+  select(Age2, Education2) %>%
+  filter(!is.na(Age2) & !is.na(Education2))
+age_edu <- table(age_edu$Age2, age_edu$Education2)
+age_edu
+balloonplot(t(age_edu), main = "Perception of seagrass status", xlab ="",
+           ylab = "", label = F, show.margins = F)
+assoc(head(age_edu, 5), shade = TRUE, las=3)
+
+chis_age_edu <- chisq.test(age_edu)
+chis_age_edu
+
+pp_df %>% 
+   filter(!is.na(Age2) & !is.na(activity_type)) %>% 
+  count(Age2, activity_type) %>%
+  ggplot() +
+  geom_tile(mapping = aes(x = Age2, y = activity_type, fill = n))
+age_act <- pp_df %>%
+  select(Age2, activity_type) %>%
+  filter(!is.na(Age2) & !is.na(activity_type))
+age_act <- table(age_act$Age2, age_act$activity_type)
+age_act
+
+mosaicplot(age_act, shade = TRUE, las=2,
+           main = "Perception of seagrass status")
+assoc(head(age_act, 5), shade = TRUE, las=3)
+prop.table(age_act) # cell percentages
+prop.table(age_act, 1) # row percentages
+prop.table(age_act, 2) # column percentages
+chis_age_act <- chisq.test(age_act)
+chis_age_act
+chis_age_act$observed
+round(chis_age_act$expected,2)
+round(chis_age_act$residuals, 3)
+corrplot(chis_age_act$residuals, is.cor = FALSE)
+contrib_age_act <- 100*chis_age_act$residuals^2/chis_age_act$statistic
+round(contrib_age_act, 3)
+corrplot(contrib_age_act, is.cor = FALSE)
+
+pp_df %>% 
+  filter(!is.na(Age2), !is.na(visit_freq2)) %>%
+  count(Age2, visit_freq2) %>% 
+  ggplot() +
+  geom_tile(mapping = aes(x = Age2, y = visit_freq2, fill = n))
+age_freq <- pp_df %>%
+  select(Age2, visit_freq2) %>%
+  filter(!is.na(Age2) & !is.na(visit_freq2))
+age_freq <- table(age_freq$Age2, age_freq$visit_freq2)
+age_freq
+
+balloonplot(t(age_freq), main = "Perception of seagrass status", xlab ="",
+           ylab = "", label = F, show.margins = F)
+assoc(head(age_freq, 5), shade = TRUE, las=3)
+
+```
+No collinearity between: Age and Education, Age and visit frequency.  However there is multicollinearity between age and activity type. Youger people are associated with below water activities (scuba, snorkelling, spearfishing), whereas adults are more related to above water activities
+
+
+## Correlation between demographic variables and perception of coral status
+```{r echo=FALSE}
+pp_df$coral_image <- factor(pp_df$coral_image,levels = c("very_poor", "poor", "good", "very_good"))
+pp_df %>%
+  filter(!is.na(coral_image)) %>% 
+  ggplot() +
+  geom_bar(mapping = aes(x = coral_image, y = stat(prop), group = 1 ))
+
+pp_df %>%
+  filter(!is.na(coral_perception)) %>%
+  ggplot() +
+  geom_bar(mapping = aes(x = coral_perception, y = stat(prop), group = 1 ))
+
+pp_df %>% 
+  filter(!is.na(coral_perception) & !is.na(Age2)) %>%
+  count(Age2, coral_perception) %>%  
+  ggplot() +
+    geom_tile(mapping = aes(x = Age2, y = coral_perception, fill = n))
+```
+
+Results shows that 84% of marine recreational users have a good or very good perception of the staus of coral reef 
+
+
+
+## Correlation between Education and image choiche of corals with new levels
+```{r echo=FALSE}
+edu_cor <- pp_df %>%
+  select(Education2, coral_perception) %>%
+  filter(!is.na(coral_perception) & !is.na(Education2))
+edu_cor <- table(edu_cor$Education2, edu_cor$coral_perception)
+
+balloonplot(t(edu_cor), main = "Perception of coral status", xlab ="",
+           ylab = "", label = F, show.margins = F)
+assoc(head(edu_cor, 5), shade = TRUE, las=3)
+```
+No correlation between age and image choice 
+
+
+## Correlation between main activity and image choiche of corals with new levels
+```{r echo = F}
+activity_cor <- pp_df %>%
+  select(activity_type, coral_perception) %>%
+  filter(!is.na(coral_perception) & !is.na(activity_type))
+activity_cor <- table(activity_cor$activity_type, activity_cor$coral_perception)
+
+balloonplot(t(activity_cor), main = "Perception of coral status", xlab ="",
+           ylab = "", label = F, show.margins = F)
+mosaicplot(activity_cor, shade = TRUE, las=2,
+           main = "Perception of coral status")
+assoc(head(activity_cor, 5), shade = TRUE, las=3)
+```
+
+No correlation between activity type and coral image choice
+
+## Correlation between visit frequency and image choiche of corals 
+```{r echo = F}
+visit_cor <- pp_df %>%
+  select(visit_freq, coral_perception) %>%
+  filter(!is.na(coral_perception) & !is.na(visit_freq))
+visit_cor <- table(visit_cor$visit_freq, visit_cor$coral_perception)
+visit_cor
+balloonplot(t(visit_cor), main = "Perception of coral status", xlab ="",
+           ylab = "", label = F, show.margins = F)
+assoc(head(visit_cor, 5), shade = TRUE, las=3)
+
+visit_cor1 <- pp_df %>%
+  select(visit_freq2, coral_perception) %>%
+  filter(!is.na(coral_perception) & !is.na(visit_freq2))
+visit_cor1 <- table(visit_cor1$visit_freq2, visit_cor1$coral_perception)
+visit_cor1
+
+
+balloonplot(t(visit_cor1), main = "Perception of seagrass status", xlab ="",
+           ylab = "", label = F, show.margins = F)
+mosaicplot(visit_cor1, shade = TRUE, las=2,
+           main = "Perception of seagrass status")
+assoc(head(visit_cor1, 5), shade = TRUE, las=3)
+
+```
+
+No correlation between visit frequency and coral image
+
+## Multicollinearity between seagrass image choiche and coral image choiche
+```{r echo = F}
+sea_cor <- pp_df %>%
+  select(seagrass_perception, coral_perception) %>%
+  filter(!is.na(coral_perception) & !is.na(seagrass_perception))
+sea_cor <- table(sea_cor$seagrass_perception, sea_cor$coral_perception)
+sea_cor
+balloonplot(t(sea_cor), main = "Perception of seagrass status against coral status", xlab ="",
+           ylab = "", label = F, show.margins = F)
+
+assoc(head(sea_cor, 5), shade = TRUE, las=3)
+
+```
+No multicollinearity between image choiche of seagrass and corals
+
+## Climate change belif 
+```{recho=F}
+(pp_df %>%
+  filter(!is.na(cc_bel), !is.na(Age2)) %>%
+  ggplot(mapping = aes(x = cc_bel, color = Age2)) + 
+  geom_freqpoly(bins = 10) +
+  scale_x_continuous(limits = c(0,100)))
+
+                
+
+```
+
+
+## Analysis of benefits
+```{r}
+benefits_df <- pp_df %>% 
+  select(Age, Age2, Education, Education2, visit_freq, visit_freq2, Gender, main_activity_trim, activity_type, ends_with("_ben") ) 
+
+benefits_only <- pp_df %>%
+  select(ends_with("_ben")) 
+boxplot(benefits_only)
+summary(benefits_only)
+(benefits_df %>%
+  filter(!is.na(Age2) & !is.na(recr_fish_ben) & !is.na(activity_type)) %>%
+  ggplot() +
+  geom_boxplot(mapping = aes(activity_type, recr_fish_ben)) +
+  coord_flip())
+```
+ 
